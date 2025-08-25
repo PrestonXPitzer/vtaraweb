@@ -1,4 +1,138 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --chicago-maroon: #7b1113;
+      --burnt-orange: #ff6700;
+    }
+  </style>
+</head>
 
-  
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-[var(--chicago-maroon)] text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">VTARA</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#splash" class="hover:text-[var(--burnt-orange)]">Home</a></li>
+        <li><a href="#examples" class="hover:text-[var(--burnt-orange)]">Examples</a></li>
+        <li><a href="#contactus" class="hover:text-[var(--burnt-orange)]">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Splash Section -->
+  <div id="splash" class="screen flex flex-col items-center justify-center min-h-screen bg-white">
+    <div class="text-center">
+      <img src="images/logo.png" class="w-32 h-32 mx-auto">
+      <h1 class="text-4xl font-bold text-[var(--chicago-maroon)] mt-4">Virginia Tech Amateur Radio Association</h1>
+      <p class="mt-4 text-lg text-gray-600">
+        Advancing the amateur radio hobby in the Virginia Tech community.
+      </p>
+    </div>
+    <div class="flex space-x-6 mt-8">
+      <img src="images/shack1.png" class="w-40 h-40 rounded-lg shadow-lg">
+      <img src="images/gs.png" class="w-40 h-40 rounded-lg shadow-lg">
+      <img src="images/field.png" class="w-40 h-40 rounded-lg shadow-lg">
+    </div>
+  </div>
+
+  <!-- Examples Section -->
+  <div id="examples" class="screen hidden flex flex-col items-center justify-center min-h-screen bg-gray-50">
+    <div class="text-center max-w-3xl">
+      <h2 class="text-3xl font-bold text-[var(--chicago-maroon)]">Our Shack</h2>
+      <p class="mt-4 text-gray-600">
+        Our "shack" is located in Squires Hall in the student media wing. It serves as the hub for our activities.
+      </p>
+      <img src="images/shack2.png" class="w-64 h-64 rounded-lg shadow-lg mx-auto mt-6">
+    </div>
+    <div class="mt-12 text-center max-w-3xl">
+      <h2 class="text-3xl font-bold text-[var(--chicago-maroon)]">Web SDR</h2>
+      <iframe src="198.82.154.183:8073" class="w-full h-64 border mt-4"></iframe>
+      <p class="mt-4 text-gray-600">
+        Our multi-receiver system allows us to listen to HF/VHF/UHF radio traffic in the area.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Us Section -->
+  <div id="contactus" class="screen hidden flex flex-col items-center justify-center min-h-screen bg-white">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-[var(--chicago-maroon)]">Contact Us</h2>
+      <p class="mt-4 text-gray-600">Join us on our platforms or reach out to our team.</p>
+      <div class="flex space-x-4 mt-6">
+        <a href="https://discord.gg/w5UGMN64Uy" class="bg-[var(--burnt-orange)] text-white px-6 py-2 rounded hover:bg-orange-600">Join Discord</a>
+        <a href="https://gobblerconnect.vt.edu/actioncenter/organization/vtara/roster" class="bg-[var(--chicago-maroon)] text-white px-6 py-2 rounded hover:bg-red-800">Join GobblerConnect</a>
+      </div>
+    </div>
+    <table class="border border-gray-300 mt-8">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="border px-4 py-2">Position</th>
+          <th class="border px-4 py-2">Name</th>
+          <th class="border px-4 py-2">Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border px-4 py-2">President</td>
+          <td class="border px-4 py-2">Sam S.</td>
+          <td class="border px-4 py-2">Contact</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Vice President</td>
+          <td class="border px-4 py-2">Tanner C.</td>
+          <td class="border px-4 py-2">Contact</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Treasurer</td>
+          <td class="border px-4 py-2">Allison P.</td>
+          <td class="border px-4 py-2">Contact</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Secretary</td>
+          <td class="border px-4 py-2">Preston P.</td>
+          <td class="border px-4 py-2">Contact</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+<script>
+  let state = "splash";
+  const screens = ["splash", "examples", "contactus"];
+  let isScrolling = false;
+
+  function switchScreen(direction) {
+    const currentIndex = screens.indexOf(state);
+    let newIndex = currentIndex + direction;
+
+    if (newIndex < 0) newIndex = screens.length - 1;
+    if (newIndex >= screens.length) newIndex = 0;
+
+    document.getElementById(state).classList.add("hidden");
+    state = screens[newIndex];
+    document.getElementById(state).classList.remove("hidden");
+  }
+
+  window.addEventListener("wheel", (event) => {
+    if (isScrolling) return;
+
+    isScrolling = true;
+    setTimeout(() => (isScrolling = false), 500);
+
+    if (event.deltaY > 0) {
+      switchScreen(1);
+    } else {
+      switchScreen(-1);
+    }
+  });
+</script>
 </html>
+
+
+
