@@ -65,7 +65,7 @@
       </div>
       <div class="mt-12 text-center max-w-3xl">
         <h2 class="text-3xl font-bold text-[var(--chicago-maroon)]">Field Events</h2>
-        <div class="carousel w-full bg-gray-200 rounded-lg shadow-lg relative overflow-hidden">
+        <div class="carousel w-full bg-gray-200 rounded-lg shadow-lg relative overflow-hidden" id="field-carousel">
           <div class="carousel-inner flex transition-transform duration-500" style="transform: translateX(0);">
             <img src="images/field.png" alt="Field 1" class="w-full object-cover rounded-lg flex-shrink-0">
             <img src="images/field2.png" alt="Field 2" class="w-full object-cover rounded-lg flex-shrink-0">
@@ -198,7 +198,7 @@
   });
 
   // Update the "Field Events" carousel
-  const fieldCarousel = document.querySelector(".carousel:nth-of-type(2)");
+  const fieldCarousel = document.getElementById("field-carousel");
   const fieldPrevButton = document.querySelector(".carousel-prev-field");
   const fieldNextButton = document.querySelector(".carousel-next-field");
   const fieldSlides = fieldCarousel.querySelectorAll(".carousel-inner img");
