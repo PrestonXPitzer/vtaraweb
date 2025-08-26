@@ -8,129 +8,232 @@
       --chicago-maroon: #7b1113;
       --burnt-orange: #ff6700;
     }
+    .splash-background {
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
   </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
   <!-- Navbar -->
-  <nav class="bg-[var(--chicago-maroon)] text-white py-4">
+  <nav class="bg-[var(--chicago-maroon)] text-white py-4 fixed top-0 left-0 w-full z-10">
     <div class="container mx-auto flex justify-between items-center px-4">
-      <h1 class="text-2xl font-bold">VTARA</h1>
+      <div class="flex items-center space-x-4">
+        <img src="images/logo.png" class="w-10 h-10">
+        <h1 class="text-2xl font-bold">VT Amateur Radio Association</h1>
+      </div>
       <ul class="flex space-x-6">
-        <li><a href="#splash" class="hover:text-[var(--burnt-orange)]">Home</a></li>
-        <li><a href="#examples" class="hover:text-[var(--burnt-orange)]">Examples</a></li>
-        <li><a href="#contactus" class="hover:text-[var(--burnt-orange)]">Contact</a></li>
+        <li><a href="#splash" class="hover:text-[var(--burnt-orange)] nav-link">Home</a></li>
+        <li><a href="#examples" class="hover:text-[var(--burnt-orange)] nav-link">Examples</a></li>
+        <li><a href="#contactus" class="hover:text-[var(--burnt-orange)] nav-link">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Splash Section -->
-  <div id="splash" class="screen flex flex-col items-center justify-center min-h-screen bg-white">
-    <div class="text-center">
-      <img src="images/logo.png" class="w-32 h-32 mx-auto">
-      <h1 class="text-4xl font-bold text-[var(--chicago-maroon)] mt-4">Virginia Tech Amateur Radio Association</h1>
-      <p class="mt-4 text-lg text-gray-600">
-        Advancing the amateur radio hobby in the Virginia Tech community.
-      </p>
-    </div>
-    <div class="flex space-x-6 mt-8">
-      <img src="images/shack1.png" class="w-40 h-40 rounded-lg shadow-lg">
-      <img src="images/gs.png" class="w-40 h-40 rounded-lg shadow-lg">
-      <img src="images/field.png" class="w-40 h-40 rounded-lg shadow-lg">
-    </div>
-  </div>
-
-  <!-- Examples Section -->
-  <div id="examples" class="screen hidden flex flex-col items-center justify-center min-h-screen bg-gray-50">
-    <div class="text-center max-w-3xl">
-      <h2 class="text-3xl font-bold text-[var(--chicago-maroon)]">Our Shack</h2>
-      <p class="mt-4 text-gray-600">
-        Our "shack" is located in Squires Hall in the student media wing. It serves as the hub for our activities.
-      </p>
-      <img src="images/shack2.png" class="w-64 h-64 rounded-lg shadow-lg mx-auto mt-6">
-    </div>
-    <div class="mt-12 text-center max-w-3xl">
-      <h2 class="text-3xl font-bold text-[var(--chicago-maroon)]">Web SDR</h2>
-      <iframe src="198.82.154.183:8073" class="w-full h-64 border mt-4"></iframe>
-      <p class="mt-4 text-gray-600">
-        Our multi-receiver system allows us to listen to HF/VHF/UHF radio traffic in the area.
-      </p>
-    </div>
-  </div>
-
-  <!-- Contact Us Section -->
-  <div id="contactus" class="screen hidden flex flex-col items-center justify-center min-h-screen bg-white">
-    <div class="text-center">
-      <h2 class="text-3xl font-bold text-[var(--chicago-maroon)]">Contact Us</h2>
-      <p class="mt-4 text-gray-600">Join us on our platforms or reach out to our team.</p>
-      <div class="flex space-x-4 mt-6">
-        <a href="https://discord.gg/w5UGMN64Uy" class="bg-[var(--burnt-orange)] text-white px-6 py-2 rounded hover:bg-orange-600">Join Discord</a>
-        <a href="https://gobblerconnect.vt.edu/actioncenter/organization/vtara/roster" class="bg-[var(--chicago-maroon)] text-white px-6 py-2 rounded hover:bg-red-800">Join GobblerConnect</a>
+  <div>
+    <!-- Splash Section -->
+    <div id="splash" class="screen flex flex-col items-center justify-center min-h-screen bg-white splash-background">
+      <div class="absolute top-20 text-center bg-[var(--burnt-orange)] opacity-80 p-6 rounded-lg">
+        <h1 class="text-4xl font-bold text-[var(--chicago-maroon)]">Virginia Tech Amateur Radio Association</h1>
+        <p class="mt-4 text-lg text-[var(--chicago-maroon)]">
+          Lorem Ipsum Del amor Lorem Ipsum Del amor Lorem Ipsum Del amor Lorem Ipsum Del amor Lorem Ipsum Del amor Lorem Ipsum Del amor
+        </p>
       </div>
     </div>
-    <table class="border border-gray-300 mt-8">
-      <thead>
-        <tr class="bg-gray-200">
-          <th class="border px-4 py-2">Position</th>
-          <th class="border px-4 py-2">Name</th>
-          <th class="border px-4 py-2">Contact</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="border px-4 py-2">President</td>
-          <td class="border px-4 py-2">Sam S.</td>
-          <td class="border px-4 py-2">Contact</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Vice President</td>
-          <td class="border px-4 py-2">Tanner C.</td>
-          <td class="border px-4 py-2">Contact</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Treasurer</td>
-          <td class="border px-4 py-2">Allison P.</td>
-          <td class="border px-4 py-2">Contact</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Secretary</td>
-          <td class="border px-4 py-2">Preston P.</td>
-          <td class="border px-4 py-2">Contact</td>
-        </tr>
-      </tbody>
-    </table>
+
+    <!-- Examples Section -->
+    <div id="examples" class="screen hidden flex flex-col items-center justify-center min-h-screen bg-gray-50">
+      <div class="mt-20"></div> <!-- Spacer to match Contact Us section -->
+      <div class="text-center max-w-3xl">
+        <h2 class="text-3xl font-bold text-[var(--chicago-maroon)]">Our Shack</h2>
+        <div class="mt-6">
+          <div class="carousel w-full bg-gray-200 rounded-lg shadow-lg relative overflow-hidden">
+            <div class="carousel-inner flex transition-transform duration-500" style="transform: translateX(0);">
+              <img src="images/shack1.png" alt="Shack 1" class="w-full object-cover rounded-lg flex-shrink-0">
+              <img src="images/shack2.png" alt="Shack 2" class="w-full object-cover rounded-lg flex-shrink-0">
+              <img src="images/shack3.png" alt="Shack 3" class="w-full object-cover rounded-lg flex-shrink-0">
+            </div>
+            <button class="carousel-prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">❮</button>
+            <button class="carousel-next absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">❯</button>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-600">
+          Come visit our "historic" club room! We have tons of equipment to play with, including a Flex-6500 SDR connected to our steerable yagi that sits atop Squires hall. 
+        </p>
+      </div>
+      <div class="mt-12 text-center max-w-3xl">
+        <h2 class="text-3xl font-bold text-[var(--chicago-maroon)]">Field Events</h2>
+        <div class="carousel w-full bg-gray-200 rounded-lg shadow-lg relative overflow-hidden">
+          <div class="carousel-inner flex transition-transform duration-500" style="transform: translateX(0);">
+            <img src="images/field.png" alt="Field 1" class="w-full object-cover rounded-lg flex-shrink-0">
+            <img src="images/field2.png" alt="Field 2" class="w-full object-cover rounded-lg flex-shrink-0">
+            <img src="images/field3.png" alt="Field 3" class="w-full object-cover rounded-lg flex-shrink-0">
+          </div>
+          <button class="carousel-prev-field absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"><</button>
+          <button class="carousel-next-field absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">❯</button>
+        </div>
+        <p class="mt-4 text-gray-600">
+          Hams don't just stay inside, the club stays active with local events like field day, exhibitions, and radio contents. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="contactus" class="screen hidden flex flex-col items-center justify-center min-h-screen bg-white">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-[var(--chicago-maroon)]">Contact Us</h2>
+        <p class="mt-4 text-gray-600">Join us on our platforms or reach out to our team.</p>
+        <div class="flex space-x-4 mt-6">
+          <a href="https://discord.gg/w5UGMN64Uy" class="bg-[var(--burnt-orange)] text-white px-6 py-2 rounded hover:bg-orange-600">Join Discord</a>
+          <a href="https://gobblerconnect.vt.edu/actioncenter/organization/vtara/roster" class="bg-[var(--chicago-maroon)] text-white px-6 py-2 rounded hover:bg-red-800">Join GobblerConnect</a>
+        </div>
+      </div>
+      <table class="border border-gray-300 mt-8">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="border px-4 py-2">Position</th>
+            <th class="border px-4 py-2">Name</th>
+            <th class="border px-4 py-2">Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">President</td>
+            <td class="border px-4 py-2">Sam S.</td>
+            <td class="border px-4 py-2">Contact</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Vice President</td>
+            <td class="border px-4 py-2">Tanner C.</td>
+            <td class="border px-4 py-2">Contact</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Treasurer</td>
+            <td class="border px-4 py-2">Allison P.</td>
+            <td class="border px-4 py-2">Contact</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Secretary</td>
+            <td class="border px-4 py-2">Preston P.</td>
+            <td class="border px-4 py-2">Contact</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Jason</td>
+            <td class="border px-4 py-2">Jason</td>
+            <td class="border px-4 py-2">Contact</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="flex justify-center space-x-4 mt-6">
+        <img src="images/madeinvi.png" class="w-40 h-20">
+        <p class="text-gray-600">Code by Preston Pitzer</p>
+        <img src="images/arch.png" class ="w-20 h-40">
+      </div>
+    </div>
   </div>
 </body>
 
 <script>
-  let state = "splash";
-  const screens = ["splash", "examples", "contactus"];
-  let isScrolling = false;
+  // Splash background cycling
+  const splash = document.getElementById("splash");
+  const images = ["images/shack2.png", "images/gs.png", "images/field.png"];
+  let currentImageIndex = 0;
 
-  function switchScreen(direction) {
-    const currentIndex = screens.indexOf(state);
-    let newIndex = currentIndex + direction;
-
-    if (newIndex < 0) newIndex = screens.length - 1;
-    if (newIndex >= screens.length) newIndex = 0;
-
-    document.getElementById(state).classList.add("hidden");
-    state = screens[newIndex];
-    document.getElementById(state).classList.remove("hidden");
+  function cycleBackground() {
+    splash.style.backgroundImage = `url(${images[currentImageIndex]})`;
+    currentImageIndex = (currentImageIndex + 1) % images.length;
   }
 
-  window.addEventListener("wheel", (event) => {
-    if (isScrolling) return;
+  setInterval(cycleBackground, 5000);
+  cycleBackground();
 
-    isScrolling = true;
-    setTimeout(() => (isScrolling = false), 500);
+  // Show only the selected screen
+  const navLinks = document.querySelectorAll(".nav-link");
+  const screens = document.querySelectorAll(".screen");
 
-    if (event.deltaY > 0) {
-      switchScreen(1);
-    } else {
-      switchScreen(-1);
-    }
+  navLinks.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+
+      screens.forEach(screen => {
+        if (screen.id === targetId) {
+          screen.classList.remove("hidden");
+        } else {
+          screen.classList.add("hidden");
+        }
+      });
+    });
   });
+
+  // Adjust carousel size based on the current image
+  function adjustCarouselSize(carousel) {
+    const currentImage = carousel.querySelector(".carousel-inner img:nth-child(" + (carousel.currentSlide + 1) + ")");
+    carousel.style.height = currentImage.offsetHeight + "px";
+  }
+
+  // Update the "Our Shack" carousel
+  const carousel = document.querySelector(".carousel");
+  const prevButton = document.querySelector(".carousel-prev");
+  const nextButton = document.querySelector(".carousel-next");
+  const slides = carousel.querySelectorAll(".carousel-inner img");
+  carousel.currentSlide = 0;
+
+  function updateCarousel() {
+    const offset = -carousel.currentSlide * 100;
+    carousel.querySelector(".carousel-inner").style.transform = `translateX(${offset}%)`;
+    adjustCarouselSize(carousel);
+  }
+
+  prevButton.addEventListener("click", () => {
+    carousel.currentSlide = (carousel.currentSlide - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  nextButton.addEventListener("click", () => {
+    carousel.currentSlide = (carousel.currentSlide + 1) % slides.length;
+    updateCarousel();
+  });
+
+  // Update the "Field Events" carousel
+  const fieldCarousel = document.querySelector(".carousel:nth-of-type(2)");
+  const fieldPrevButton = document.querySelector(".carousel-prev-field");
+  const fieldNextButton = document.querySelector(".carousel-next-field");
+  const fieldSlides = fieldCarousel.querySelectorAll(".carousel-inner img");
+  fieldCarousel.currentSlide = 0;
+
+  function updateFieldCarousel() {
+    const offset = -fieldCarousel.currentSlide * 100;
+    fieldCarousel.querySelector(".carousel-inner").style.transform = `translateX(${offset}%)`;
+    adjustCarouselSize(fieldCarousel);
+  }
+
+  fieldPrevButton.addEventListener("click", () => {
+    fieldCarousel.currentSlide = (fieldCarousel.currentSlide - 1 + fieldSlides.length) % fieldSlides.length;
+    updateFieldCarousel();
+  });
+
+  fieldNextButton.addEventListener("click", () => {
+    fieldCarousel.currentSlide = (fieldCarousel.currentSlide + 1) % fieldSlides.length;
+    updateFieldCarousel();
+  });
+
+  // Initialize carousel sizes
+  adjustCarouselSize(carousel);
+  adjustCarouselSize(fieldCarousel);
+
+  // Optional: Auto-slide every 5 seconds
+  setInterval(() => {
+    carousel.currentSlide = (carousel.currentSlide + 1) % slides.length;
+    updateCarousel();
+  }, 5000);
+
+  setInterval(() => {
+    fieldCarousel.currentSlide = (fieldCarousel.currentSlide + 1) % fieldSlides.length;
+    updateFieldCarousel();
+  }, 5000);
 </script>
 </html>
 
